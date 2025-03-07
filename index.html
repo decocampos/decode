@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Minimalista</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Serviços</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção 1: Imagem com Texto Inicial -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Bem-vindo ao Nosso Site</h1>
+      <p>Sua solução em desenvolvimento e data science</p>
+    </div>
+  </section>
+
+  <!-- Seção 2: Nossos Serviços -->
+  <section id="services">
+    <h2>Nossos Serviços</h2>
+    <div class="service-items">
+      <div class="service-item">
+        <h3>Desenvolvimento</h3>
+        <p>Descrição breve sobre desenvolvimento.</p>
+      </div>
+      <div class="service-item">
+        <h3>Data Science</h3>
+        <p>Descrição breve sobre data science.</p>
+      </div>
+      <div class="service-item">
+        <h3>Consultoria</h3>
+        <p>Descrição breve sobre consultoria.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção 3: Países que já oferecemos serviços -->
+  <section id="countries">
+    <h2>Países Atendidos</h2>
+    <ul class="country-list">
+      <li>Brasil</li>
+      <li>Portugal</li>
+      <li>Estados Unidos</li>
+      <li>Espanha</li>
+      <li>França</li>
+      <li>Alemanha</li>
+    </ul>
+  </section>
+
+  <!-- Seção 4: Carrossel com Projetos Cases -->
+  <section id="projects">
+    <h2>Projetos Cases</h2>
+    <div class="carousel" id="projectsCarousel">
+      <div class="carousel-item active">
+        <img src="https://via.placeholder.com/800x400?text=Projeto+1" alt="Projeto 1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/800x400?text=Projeto+2" alt="Projeto 2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/800x400?text=Projeto+3" alt="Projeto 3">
+      </div>
+      <button class="prev" onclick="prevSlide('projectsCarousel')">&#10094;</button>
+      <button class="next" onclick="nextSlide('projectsCarousel')">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Seção 5: Carrossel com Feedback dos Clientes -->
+  <section id="feedback">
+    <h2>Feedback dos Clientes</h2>
+    <div class="carousel" id="feedbackCarousel">
+      <div class="carousel-item active">
+        <blockquote>"Excelente serviço! Altamente recomendado."</blockquote>
+        <p>- Cliente 1</p>
+      </div>
+      <div class="carousel-item">
+        <blockquote>"Profissionalismo e qualidade."</blockquote>
+        <p>- Cliente 2</p>
+      </div>
+      <div class="carousel-item">
+        <blockquote>"Transformou nosso negócio."</blockquote>
+        <p>- Cliente 3</p>
+      </div>
+      <button class="prev" onclick="prevSlide('feedbackCarousel')">&#10094;</button>
+      <button class="next" onclick="nextSlide('feedbackCarousel')">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Seção 6: Formulário de Contato -->
+  <section id="contact">
+    <h2>Contato</h2>
+    <form id="contactForm">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - Seu Nome ou Empresa</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
