@@ -1,4 +1,4 @@
-/* Reset básico e estilo do corpo */
+/* Reset e Estilos Gerais */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,60 +6,79 @@ body {
   color: #333;
 }
 
-/* Header e Navegação */
+/* Header */
 header {
   background-color: #f8f8f8;
   padding: 10px 20px;
 }
-
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.logo span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
 nav ul {
   list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
 }
-
 nav ul li {
-  margin-right: 20px;
+  margin-left: 20px;
 }
-
 nav ul li a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
 }
 
-/* Seção Hero */
+/* Seção Hero com imagem de fundo e filtro escuro */
 #hero {
   position: relative;
-  background: url('https://via.placeholder.com/1600x600?text=Banner') no-repeat center center/cover;
+  background: url('images/hero-bg.jpg') no-repeat center center/cover;
   height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
 .hero-content {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
+  position: relative;
+  z-index: 1;
   text-align: center;
-  border-radius: 8px;
+  color: #fff;
 }
 
-/* Estilo geral das seções */
+/* Seções Gerais */
 section {
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Seção de Serviços */
+/* Serviços */
 .service-items {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
-
 .service-item {
   flex: 1;
   min-width: 250px;
@@ -68,19 +87,25 @@ section {
   border-radius: 8px;
 }
 
-/* Seção de Países */
-.country-list {
-  list-style: none;
+/* Países: Itens em forma de círculo */
+#countries .country-list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
-  padding: 0;
+  gap: 20px;
 }
-
-.country-list li {
-  background: #f0f0f0;
-  padding: 10px 15px;
-  border-radius: 5px;
+.country-item {
+  text-align: center;
+}
+.country-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.country-item p {
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 /* Carrossel */
@@ -88,29 +113,23 @@ section {
   position: relative;
   overflow: hidden;
 }
-
 .carousel-item {
   display: none;
   text-align: center;
 }
-
 .carousel-item.active {
   display: block;
 }
-
 .carousel img {
   width: 100%;
   height: auto;
   border-radius: 8px;
 }
-
 .carousel blockquote {
   font-style: italic;
   margin: 0;
   padding: 20px;
 }
-
-/* Botões do Carrossel */
 .carousel .prev,
 .carousel .next {
   position: absolute;
@@ -122,11 +141,9 @@ section {
   cursor: pointer;
   border-radius: 50%;
 }
-
 .carousel .prev {
   left: 10px;
 }
-
 .carousel .next {
   right: 10px;
 }
@@ -136,12 +153,10 @@ form {
   display: flex;
   flex-direction: column;
 }
-
 form label {
   margin-bottom: 5px;
   font-weight: bold;
 }
-
 form input,
 form textarea {
   padding: 10px;
@@ -149,7 +164,6 @@ form textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
 form button {
   padding: 10px;
   background: #333;
@@ -159,9 +173,17 @@ form button {
   cursor: pointer;
 }
 
-/* Footer */
+/* Footer com Redes Sociais */
 footer {
   background-color: #f8f8f8;
   text-align: center;
   padding: 20px;
+}
+.footer-social {
+  margin-bottom: 10px;
+}
+.footer-social a img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
 }
