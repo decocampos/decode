@@ -3,23 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site Minimalista</title>
+  <title>DECODE - Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header com logo à esquerda e navegação à direita -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="service.html">Serviços</a></li>
-      </ul>
-    </nav>
+    <div class="header-container">
+      <div class="logo">
+        <!-- Substitua 'images/logo.png' pela sua logo, se necessário -->
+        <img src="images/logo.png" alt="Logo DECODE">
+        <span>DECODE</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Serviços</a></li>
+          <!-- O link de Contato rola até o formulário na mesma página -->
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Seção 1: Imagem com Texto Inicial -->
+  <!-- Seção Hero: Imagem de fundo com filtro escuro e texto em branco -->
   <section id="hero">
     <div class="hero-content">
-      <h1>Bem-vindo ao Nosso Site</h1>
+      <h1>Bem-vindo à DECODE</h1>
       <p>Sua solução em desenvolvimento e data science</p>
     </div>
   </section>
@@ -43,17 +53,35 @@
     </div>
   </section>
 
-  <!-- Seção 3: Países que já oferecemos serviços -->
+  <!-- Seção 3: Países Atendidos com círculos -->
   <section id="countries">
     <h2>Países Atendidos</h2>
-    <ul class="country-list">
-      <li>Brasil</li>
-      <li>Portugal</li>
-      <li>Estados Unidos</li>
-      <li>Espanha</li>
-      <li>França</li>
-      <li>Alemanha</li>
-    </ul>
+    <div class="country-list">
+      <div class="country-item">
+        <img src="images/brasil.jpg" alt="Brasil">
+        <p>Brasil</p>
+      </div>
+      <div class="country-item">
+        <img src="images/portugal.jpg" alt="Portugal">
+        <p>Portugal</p>
+      </div>
+      <div class="country-item">
+        <img src="images/estados_unidos.jpg" alt="Estados Unidos">
+        <p>Estados Unidos</p>
+      </div>
+      <div class="country-item">
+        <img src="images/espanha.jpg" alt="Espanha">
+        <p>Espanha</p>
+      </div>
+      <div class="country-item">
+        <img src="images/franca.jpg" alt="França">
+        <p>França</p>
+      </div>
+      <div class="country-item">
+        <img src="images/alemanha.jpg" alt="Alemanha">
+        <p>Alemanha</p>
+      </div>
+    </div>
   </section>
 
   <!-- Seção 4: Carrossel com Projetos Cases -->
@@ -61,13 +89,13 @@
     <h2>Projetos Cases</h2>
     <div class="carousel" id="projectsCarousel">
       <div class="carousel-item active">
-        <img src="https://via.placeholder.com/800x400?text=Projeto+1" alt="Projeto 1">
+        <img src="images/projeto1.jpg" alt="Projeto 1">
       </div>
       <div class="carousel-item">
-        <img src="https://via.placeholder.com/800x400?text=Projeto+2" alt="Projeto 2">
+        <img src="images/projeto2.jpg" alt="Projeto 2">
       </div>
       <div class="carousel-item">
-        <img src="https://via.placeholder.com/800x400?text=Projeto+3" alt="Projeto 3">
+        <img src="images/projeto3.jpg" alt="Projeto 3">
       </div>
       <button class="prev" onclick="prevSlide('projectsCarousel')">&#10094;</button>
       <button class="next" onclick="nextSlide('projectsCarousel')">&#10095;</button>
@@ -112,8 +140,14 @@
     </form>
   </section>
 
+  <!-- Footer com link para o LinkedIn -->
   <footer>
-    <p>&copy; 2025 - Seu Nome ou Empresa</p>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/seu-perfil" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+    <p>&copy; 2025 DECODE. Todos os direitos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
